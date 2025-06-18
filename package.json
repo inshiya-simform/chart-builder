@@ -12,6 +12,8 @@
   },
   "dependencies": {
     "antd": "^5.26.1",
+    "chart.js": "^4.5.0",
+    "lune-ui": "^0.1.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
