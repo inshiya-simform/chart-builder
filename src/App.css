@@ -4,3 +4,8 @@
 .ant-layout-header.header {
   padding: 6px 0px;
 }
+.ant-layout-content.chart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

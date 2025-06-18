@@ -1,5 +1,7 @@
+import { Layout } from "antd";
 import type { ChartData } from "chart.js";
 import { Charts } from "lune-ui";
+import "./Content.css";
 
 const chartData: ChartData = {
   labels: ["January", "February", "March", "April", "May"],
@@ -15,13 +17,15 @@ const chartData: ChartData = {
 };
 const Content = () => {
   return (
-    <Charts
-      className="chart"
-      chartType="line"
-      chartTitle="Sample Chart"
-      chartLegend="bottom"
-      data={chartData}
-    />
+    <Layout className="chart-container">
+      <Charts
+        className="chart"
+        chartType="pie"
+        chartTitle="Sample Chart"
+        chartLegend="bottom"
+        data={chartData}
+      />
+    </Layout>
   );
 };
 
