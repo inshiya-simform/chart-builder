@@ -12,7 +12,7 @@ const App = () => {
         <Sidebar />
       </Sider>
       <Layout>
-        <Header>
+        <Header className="header">
           <ChartHeader />
         </Header>
         <Content>
