@@ -15,7 +15,7 @@ const App = () => {
         <Header className="header">
           <ChartHeader />
         </Header>
-        <Content>
+        <Content className="chart">
           <ChartContent />
         </Content>
       </Layout>
