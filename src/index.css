@@ -5,7 +5,24 @@ body {
   box-sizing: border-box;
   height: 100%;
 }
-
+h1:where(.css-dev-only-do-not-override-1narp4f).ant-typography,
+div:where(.css-dev-only-do-not-override-1narp4f).ant-typography-h1,
+div:where(.css-dev-only-do-not-override-1narp4f).ant-typography-h1 > textarea,
+:where(.css-dev-only-do-not-override-1narp4f).ant-typography h1,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+:where(
+    .css-dev-only-do-not-override-1narp4f
+  ).ant-input-outlined.ant-input-disabled,
+:where(.css-dev-only-do-not-override-1narp4f).ant-input-outlined[disabled] {
+  color: white;
+}
 #root {
   height: 100%;
 }
