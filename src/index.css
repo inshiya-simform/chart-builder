@@ -5,10 +5,11 @@ body {
   box-sizing: border-box;
   height: 100%;
 }
-h1:where(.css-dev-only-do-not-override-1ukz1po).ant-typography,
-div:where(.css-dev-only-do-not-override-1ukz1po).ant-typography-h1,
-div:where(.css-dev-only-do-not-override-1ukz1po).ant-typography-h1 > textarea,
-:where(.css-dev-only-do-not-override-1ukz1po).ant-typography h1 h1,
+h1:where(.css-dev-only-do-not-override-1narp4f).ant-typography,
+div:where(.css-dev-only-do-not-override-1narp4f).ant-typography-h1,
+div:where(.css-dev-only-do-not-override-1narp4f).ant-typography-h1 > textarea,
+:where(.css-dev-only-do-not-override-1narp4f).ant-typography h1,
+h1,
 h2,
 h3,
 h4,
