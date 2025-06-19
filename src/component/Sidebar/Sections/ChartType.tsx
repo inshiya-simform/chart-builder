@@ -2,6 +2,7 @@ import React from "react";
 import { Radio, Typography, type RadioChangeEvent } from "antd";
 import { useAppDispatch, useAppSelector } from "../../../store/hook";
 import { chartActions } from "../../../store";
+import { CHART_TYPES } from "../../../types/types";
 
 const ChartType: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -17,13 +18,13 @@ const ChartType: React.FC = () => {
       </div>
       <Radio.Group onChange={onChange} value={chartProps.chartType}>
         <div>
-          <Radio value="bar">Bar</Radio>
+          <Radio value={CHART_TYPES.bar}>Bar</Radio>
         </div>
         <div>
-          <Radio value="line">Line</Radio>
+          <Radio value={CHART_TYPES.line}>Line</Radio>
         </div>
         <div>
-          <Radio value="pie">Pie</Radio>
+          <Radio value={CHART_TYPES.pie}>Pie</Radio>
         </div>
       </Radio.Group>
     </>

@@ -2,13 +2,14 @@ import React from "react";
 import { Typography, Select } from "antd";
 import { useAppDispatch, useAppSelector } from "../../../store/hook";
 import { chartActions } from "../../../store";
+import { LEGEND_POSITIONS, type LegendPosition } from "../../../types/types";
 
 const { Option } = Select;
 
 const LegendPosition: React.FC = () => {
   const dispatch = useAppDispatch();
   const chattProps = useAppSelector((state) => state.chart);
-  const handleChange = (value: string) => {
+  const handleChange = (value: LegendPosition) => {
     dispatch(chartActions.setLegendPosition(value));
   };
 
@@ -20,14 +21,14 @@ const LegendPosition: React.FC = () => {
       <div>
         <Select
           value={chattProps.legendPosition}
-          defaultValue="--select-position--"
+          defaultValue="top"
           onChange={handleChange}
-          dropdownMatchSelectWidth={false}
+          popupMatchSelectWidth={false}
         >
-          <Option value="left">Left</Option>
-          <Option value="right">Right</Option>
-          <Option value="bottom">Bottom</Option>
-          <Option value="top">Top</Option>
+          <Option value={LEGEND_POSITIONS.left}>Left</Option>
+          <Option value={LEGEND_POSITIONS.right}>Right</Option>
+          <Option value={LEGEND_POSITIONS.bottom}>Bottom</Option>
+          <Option value={LEGEND_POSITIONS.top}>Top</Option>
         </Select>
       </div>
     </>

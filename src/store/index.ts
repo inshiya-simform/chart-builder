@@ -1,11 +1,18 @@
 import { configureStore, createSlice } from "@reduxjs/toolkit";
 import type { ChartData } from "chart.js";
+import type {
+  ChartType,
+  LegendAction,
+  LegendPosition,
+  TitleAction,
+  TypeAction,
+} from "../types/types";
 
 type Chart = {
   chartTitle: string;
   data?: ChartData;
-  chartType: "bar" | "line" | "pie";
-  legendPosition: "left" | "top" | "right" | "bottom" | "center" | "chartArea";
+  chartType: ChartType;
+  legendPosition: LegendPosition;
 };
 const initialState: Chart = {
   chartType: "bar",
@@ -21,13 +28,13 @@ const chartSlice = createSlice({
   name: "chart",
   initialState: initialState,
   reducers: {
-    setChartType: (state, action) => {
+    setChartType: (state, action: TypeAction) => {
       state.chartType = action.payload;
     },
-    setChartTitle: (state, action) => {
+    setChartTitle: (state, action: TitleAction) => {
       state.chartTitle = action.payload;
     },
-    setLegendPosition: (state, action) => {
+    setLegendPosition: (state, action: LegendAction) => {
       state.legendPosition = action.payload;
     },
     setData: (state, action) => {
