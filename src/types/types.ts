@@ -24,3 +24,10 @@ export type TitleAction = {
   type: string;
   payload: string;
 };
+
+export type Dataset = {
+  label: string;
+  data: number[];
+  backgroundColor: string[];
+  borderColor: string[];
+};
