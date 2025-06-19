@@ -3,7 +3,7 @@ import type { ChartData } from "chart.js";
 import type {
   ChartType,
   LegendAction,
-  LegendPosition,
+  LegendPositionType,
   TitleAction,
   TypeAction,
 } from "../types/types";
@@ -12,7 +12,7 @@ type Chart = {
   chartTitle: string;
   data?: ChartData;
   chartType: ChartType;
-  legendPosition: LegendPosition;
+  legendPosition: LegendPositionType;
 };
 const initialState: Chart = {
   chartType: "bar",

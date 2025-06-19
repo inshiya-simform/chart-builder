@@ -10,11 +10,11 @@ export const LEGEND_POSITIONS = {
   bottom: "bottom",
 };
 export type ChartType = keyof typeof CHART_TYPES;
-export type LegendPosition = keyof typeof LEGEND_POSITIONS;
+export type LegendPositionType = keyof typeof LEGEND_POSITIONS;
 
 export type LegendAction = {
   type: string;
-  payload: LegendPosition;
+  payload: LegendPositionType;
 };
 export type TypeAction = {
   type: string;

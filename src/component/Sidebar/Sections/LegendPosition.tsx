@@ -2,14 +2,17 @@ import React from "react";
 import { Select } from "antd";
 import { useAppDispatch, useAppSelector } from "../../../store/hook";
 import { chartActions } from "../../../store";
-import { LEGEND_POSITIONS, type LegendPosition } from "../../../types/types";
+import {
+  LEGEND_POSITIONS,
+  type LegendPositionType,
+} from "../../../types/types";
 
 const { Option } = Select;
 
 const LegendPosition: React.FC = () => {
   const dispatch = useAppDispatch();
   const chattProps = useAppSelector((state) => state.chart);
-  const handleChange = (value: LegendPosition) => {
+  const handleChange = (value: LegendPositionType) => {
     dispatch(chartActions.setLegendPosition(value));
   };
 
