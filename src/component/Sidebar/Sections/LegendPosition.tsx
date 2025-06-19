@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, Select } from "antd";
+import { Select } from "antd";
 import { useAppDispatch, useAppSelector } from "../../../store/hook";
 import { chartActions } from "../../../store";
 import { LEGEND_POSITIONS, type LegendPosition } from "../../../types/types";
@@ -14,24 +14,17 @@ const LegendPosition: React.FC = () => {
   };
 
   return (
-    <>
-      <div>
-        <Typography.Text>Position</Typography.Text>
-      </div>
-      <div>
-        <Select
-          value={chattProps.legendPosition}
-          defaultValue="top"
-          onChange={handleChange}
-          popupMatchSelectWidth={false}
-        >
-          <Option value={LEGEND_POSITIONS.left}>Left</Option>
-          <Option value={LEGEND_POSITIONS.right}>Right</Option>
-          <Option value={LEGEND_POSITIONS.bottom}>Bottom</Option>
-          <Option value={LEGEND_POSITIONS.top}>Top</Option>
-        </Select>
-      </div>
-    </>
+    <Select
+      value={chattProps.legendPosition}
+      defaultValue="top"
+      className="drop-down"
+      onChange={handleChange}
+    >
+      <Option value={LEGEND_POSITIONS.left}>Left</Option>
+      <Option value={LEGEND_POSITIONS.right}>Right</Option>
+      <Option value={LEGEND_POSITIONS.bottom}>Bottom</Option>
+      <Option value={LEGEND_POSITIONS.top}>Top</Option>
+    </Select>
   );
 };
 

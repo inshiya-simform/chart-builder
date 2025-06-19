@@ -1,5 +1,5 @@
 import React from "react";
-import { Radio, Typography, type RadioChangeEvent } from "antd";
+import { Radio, type RadioChangeEvent } from "antd";
 import { useAppDispatch, useAppSelector } from "../../../store/hook";
 import { chartActions } from "../../../store";
 import { CHART_TYPES } from "../../../types/types";
@@ -12,22 +12,11 @@ const ChartType: React.FC = () => {
   };
 
   return (
-    <>
-      <div>
-        <Typography.Text>type</Typography.Text>
-      </div>
-      <Radio.Group onChange={onChange} value={chartProps.chartType}>
-        <div>
-          <Radio value={CHART_TYPES.bar}>Bar</Radio>
-        </div>
-        <div>
-          <Radio value={CHART_TYPES.line}>Line</Radio>
-        </div>
-        <div>
-          <Radio value={CHART_TYPES.pie}>Pie</Radio>
-        </div>
-      </Radio.Group>
-    </>
+    <Radio.Group onChange={onChange} value={chartProps.chartType}>
+      <Radio value={CHART_TYPES.bar}>Bar</Radio>
+      <Radio value={CHART_TYPES.line}>Line</Radio>
+      <Radio value={CHART_TYPES.pie}>Pie</Radio>
+    </Radio.Group>
   );
 };
 
