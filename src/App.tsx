@@ -8,7 +8,7 @@ import "./App.css";
 const App = () => {
   return (
     <Layout className="main-container">
-      <Sider>
+      <Sider width={300}>
         <Sidebar />
       </Sider>
       <Layout>
