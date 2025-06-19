@@ -1,13 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import { Typography, Select } from "antd";
+import { useAppDispatch, useAppSelector } from "../../../store/hook";
+import { chartActions } from "../../../store";
 
 const { Option } = Select;
 
 const LegendPosition: React.FC = () => {
-  const [position, setPosition] = useState("top");
-
+  const dispatch = useAppDispatch();
+  const chattProps = useAppSelector((state) => state.chart);
   const handleChange = (value: string) => {
-    setPosition(value);
+    dispatch(chartActions.setLegendPosition(value));
   };
 
   return (
@@ -17,9 +19,10 @@ const LegendPosition: React.FC = () => {
       </div>
       <div>
         <Select
-          value={position}
+          value={chattProps.legendPosition}
           defaultValue="--select-position--"
           onChange={handleChange}
+          dropdownMatchSelectWidth={false}
         >
           <Option value="left">Left</Option>
           <Option value="right">Right</Option>

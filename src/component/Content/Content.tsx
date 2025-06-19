@@ -2,6 +2,7 @@ import { Layout } from "antd";
 import type { ChartData } from "chart.js";
 import { Charts } from "lune-ui";
 import "./Content.css";
+import { useAppSelector } from "../../store/hook";
 
 const chartData: ChartData = {
   labels: ["January", "February", "March", "April", "May"],
@@ -16,13 +17,14 @@ const chartData: ChartData = {
   ],
 };
 const Content = () => {
+  const chartProps = useAppSelector((state) => state.chart);
   return (
     <Layout className="chart-container">
       <Charts
         className="chart"
-        chartType="pie"
-        chartTitle="Sample Chart"
-        chartLegend="bottom"
+        chartType={chartProps.chartType}
+        chartTitle={chartProps.chartTitle}
+        chartLegend={chartProps.legendPosition}
         data={chartData}
       />
     </Layout>
