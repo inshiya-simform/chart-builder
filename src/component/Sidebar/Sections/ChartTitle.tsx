@@ -12,7 +12,7 @@ const ChartTitle = () => {
       <div>
         <Input
           type="text"
-          onChange={(e) => dispatch(chartActions.setChartTitle(e.target.value))}
+          onBlur={(e) => dispatch(chartActions.setChartTitle(e.target.value))}
           placeholder="Enter chart title"
         />
       </div>
