@@ -1,5 +1,5 @@
 import { Flex, Typography } from "antd";
-import logo from "../../../public/logo.svg";
+import logo from "/logo.svg";
 
 const Header = () => {
   return (
