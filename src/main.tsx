@@ -23,6 +23,17 @@ createRoot(document.getElementById("root")!).render(
             colorText: "black",
             colorTextHeading: "black",
           },
+          Notification: {
+            colorText: "black",
+            colorTextHeading: "black",
+          },
+          Alert: {
+            colorText: "black",
+          },
+          Upload: {
+            colorText: "black",
+            colorTextHeading: "black",
+          },
         },
       }}
     >

@@ -14,7 +14,7 @@ type Chart = {
   chartType: ChartType;
   legendPosition: LegendPositionType;
 };
-const initialState: Chart = {
+export const initialState: Chart = {
   chartType: "bar",
   chartTitle: "",
   legendPosition: "top",

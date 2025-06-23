@@ -1,32 +1,30 @@
-import { Layout } from "antd";
-import type { ChartData } from "chart.js";
+import { Alert, Layout } from "antd";
 import { Charts } from "lune-ui";
 import "./Content.css";
 import { useAppSelector } from "../../store/hook";
 
-const chartData: ChartData = {
-  labels: ["January", "February", "March", "April", "May"],
-  datasets: [
-    {
-      label: "Dataset 1",
-      data: [10, 20, 30, 40, 50],
-      backgroundColor: ["rgba(255, 99, 132, 0.2)"],
-      borderColor: ["rgba(255, 99, 132, 1)"],
-      borderWidth: 1,
-    },
-  ],
-};
 const Content = () => {
   const chartProps = useAppSelector((state) => state.chart);
+  let chartData;
+  if (chartProps.data?.labels) {
+    chartData =
+      chartProps.data?.labels?.length > 0
+        ? { ...chartProps.data, datasets: [...chartProps.data.datasets] }
+        : undefined;
+  }
   return (
     <Layout className="chart-container">
-      <Charts
-        className="chart"
-        chartType={chartProps.chartType}
-        chartTitle={chartProps.chartTitle}
-        chartLegend={chartProps.legendPosition}
-        data={chartData}
-      />
+      {chartData ? (
+        <Charts
+          className="chart"
+          chartType={chartProps.chartType}
+          chartTitle={chartProps.chartTitle}
+          chartLegend={chartProps.legendPosition}
+          data={chartData}
+        />
+      ) : (
+        <Alert message="Add data to build chart" type="info" showIcon />
+      )}
     </Layout>
   );
 };

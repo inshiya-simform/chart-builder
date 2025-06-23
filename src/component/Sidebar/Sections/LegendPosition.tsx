@@ -19,7 +19,6 @@ const LegendPosition: React.FC = () => {
   return (
     <Select
       value={chattProps.legendPosition}
-      defaultValue="top"
       className="drop-down"
       onChange={handleChange}
     >
