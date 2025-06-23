@@ -26,3 +26,11 @@ h6 {
 #root {
   height: 100%;
 }
+.full-width,
+.ant-space-item {
+  width: 100%;
+}
+.sample-csv-text {
+  color: black;
+  margin: 0;
+}

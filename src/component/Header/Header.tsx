@@ -3,9 +3,9 @@ import logo from "../../../public/logo.svg";
 
 const Header = () => {
   return (
-    <Flex align="center" gap={20} className="header-container">
+    <Flex align="center" gap={20}>
       <img src={logo} alt="logo" />
-      <Typography.Title className="text">Chart Builder</Typography.Title>
+      <Typography.Title>Chart Builder</Typography.Title>
     </Flex>
   );
 };

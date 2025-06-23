@@ -1,4 +1,4 @@
-import { Empty, Layout } from "antd";
+import { Alert, Layout } from "antd";
 import { Charts } from "lune-ui";
 import "./Content.css";
 import { useAppSelector } from "../../store/hook";
@@ -23,7 +23,7 @@ const Content = () => {
           data={chartData}
         />
       ) : (
-        <Empty />
+        <Alert message="Add data to build chart" type="info" showIcon />
       )}
     </Layout>
   );

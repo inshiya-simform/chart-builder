@@ -10,3 +10,12 @@
 .drop-down {
   width: 100%;
 }
+
+.ant-typography.upload-heading {
+  color: black;
+}
+
+.extra-info-upload {
+  color: grey;
+  margin: 0;
+}

@@ -1,6 +1,7 @@
 import type { Dataset } from "../types/types";
 
-export const csvToObject = (csv: string) => {
+export const csvToObject = (csv: string, label: string) => {
+  console.log(label);
   const lines = csv.split("\n");
   const labels: Array<string> = [];
   const datasets: Dataset[] = [];
@@ -15,7 +16,7 @@ export const csvToObject = (csv: string) => {
     borderColor.push(values[3]);
   }
   datasets.push({
-    label: "Dataset 1",
+    label: label,
     data: data,
     backgroundColor: backgroundColor,
     borderColor: borderColor,
